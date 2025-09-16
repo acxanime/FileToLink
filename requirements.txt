@@ -1,14 +1,20 @@
-pyrofork
+pyrofork>=2.3.68
 tgcrypto
 aiohttp
-python-dotenv<=0.20.0
+python-dotenv
 motor
 aiofiles
 dnspython
 apscheduler
 requests
 psutil
-shortzy
-jinja2
-humanize
+colorama
 pytz
+shortzy
+
+# For Web Deployable
+jinja2
+Flask
+gunicorn
+werkzeug
+itsdangerous
