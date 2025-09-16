@@ -16,9 +16,13 @@ async def start(client, message):
         await db.add_user(message.from_user.id, message.from_user.first_name)
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     rm = InlineKeyboardMarkup(
-        [[
-            InlineKeyboardButton("✨ Update Channel", url="https://t.me/ST_Rename_Update")
-        ]] 
+        [
+            [InlineKeyboardButton('🔊 Updates', url='https://t.me/ST_Rename_Update'),
+        InlineKeyboardButton('♻️ Sᴜᴩᴩᴏʀᴛ', url='https://t.me/Anime_Chats_St')],
+        [InlineKeyboardButton('❤️‍🩹 About', callback_data='about'),
+        InlineKeyboardButton('🛠️ Help', callback_data='help')],
+        [InlineKeyboardButton("👨‍💻 Developer 🧑‍💻", url='https://t.me/Sitaratoons_Support_bot')]
+        ] 
     )
     await client.send_message(
         chat_id=message.from_user.id,
